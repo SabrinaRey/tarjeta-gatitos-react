@@ -1,6 +1,11 @@
 import React from 'react';
 import TarjetaDeGatos from './components/TarjetaDeGatos';
 import './App.css';
+import BarraNav from './components/BarraNav';
+import Footer from './components/Footer';
+import Article from './components/Article';
+import Formulario from './components/Formulario';
+// import icono from './img/hamburguesa.png'
 
 
 const gatos = [
@@ -54,16 +59,28 @@ const gatos = [
 
 function App() {
   return (
-    <section className="tarjetas-principal">
-    <div className="cards">
-    {
-           gatos.map((gato, i) => <TarjetaDeGatos key={i} info={gato} />
-       )
-      }
+    <>
+      <BarraNav />
+      <article className="principal">
+        <Article />
+      </article>
+      <section className="formulario">
+        <Formulario />
+      </section>
+      <section className="tarjetas-principal">
+        <div className="cards">
+          {
+            gatos.map((gato, i) => <TarjetaDeGatos key={i} info={gato} />
+            )
+          }
+        </div>
 
-    </div>
 
-</section>
+
+      </section>
+      <Footer />
+
+    </>
   );
 }
 
