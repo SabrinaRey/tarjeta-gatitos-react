@@ -14,7 +14,7 @@ const Formulario = () => {
         <label> Telefono:
             <input type="text" name="telefono" placeholder="Ingresa tu telefono" />
         </label>
-        <label class="inline"> Color de pelaje:
+        <label className="inline"> Color de pelaje:
             <input type="checkbox" name="pelaje" value="negro"/>Negro
             <input type="checkbox" name="pelaje" value="blanco"/>Blanco
             <input type="checkbox" name="pelaje" value="gris"/>Gris
@@ -22,7 +22,7 @@ const Formulario = () => {
             <input type="checkbox" name="pelaje" value="marron"/>Marrón
             <input type="checkbox" name="pelaje" value="atigrado"/>Atigrado
         </label> 
-        <label class="inline"> Sexo:
+        <label className="inline"> Sexo:
             <input type="radio" name="sexo" value="femenino"/>Femenino
             <input type="radio" name="sexo" value="masculino"/>Masculino
             <input type="radio" name="sexo" value="indiferente"/>Indiferente

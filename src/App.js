@@ -5,6 +5,7 @@ import BarraNav from './components/BarraNav';
 import Footer from './components/Footer';
 import Article from './components/Article';
 import Formulario from './components/Formulario';
+import ContenedorDeTarjeta from './components/ContenedorDeTarjeta'
 // import icono from './img/hamburguesa.png'
 
 
@@ -15,7 +16,8 @@ const gatos = [
     longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
     img: "https://animalrevista.com/wp-content/uploads/2016/07/gatas-calico-tricolor-animal-la-revista.jpg",
     color: ["atigrado", "blanco", "negro", "marron",],
-    sexo: "masculino"
+    sexo: "masculino",
+    disponible: false,
   },
 
   {
@@ -24,7 +26,8 @@ const gatos = [
     longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
     img: "https://www.imagenesdegatos.net/wp-content/uploads/2015/12/gato-gris-ojos-naranja-3.jpg",
     color: ["blanco"],
-    sexo: "femenino"
+    sexo: "femenino",
+    disponible: true,
   },
 
   {
@@ -33,7 +36,8 @@ const gatos = [
     longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
     img: "https://image.freepik.com/foto-gratis/primer-plano-hermoso-gato-negro-blanco-marcas-sueno-cara-acostado-piso-concreto_44161-220.jpg",
     color: ["negro"],
-    sexo: "femenino"
+    sexo: "femenino",
+    disponible: false,
   },
 
   {
@@ -42,7 +46,8 @@ const gatos = [
     longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkqkcBuVxZdrxWFYiEhoR3SpIioYCMesijUKHfjh7pTz-ctaf5&s",
     color: ["blanco", "gris"],
-    sexo: "masculino"
+    sexo: "masculino",
+    disponible: true,
   },
 
   {
@@ -51,13 +56,16 @@ const gatos = [
     longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
     img: "https://misanimales.com/wp-content/uploads/2018/07/mito-del-gato-negro.jpg",
     color: ["blanco", "negro", "naranja", "marron"],
-    sexo: "masculino"
+    sexo: "masculino",
+    disponible: false,
 
   },
 
 ]
 
 function App() {
+ 
+
   return (
     <>
       <BarraNav />
@@ -68,15 +76,7 @@ function App() {
         <Formulario />
       </section>
       <section className="tarjetas-principal">
-        <div className="cards">
-          {
-            gatos.map((gato, i) => <TarjetaDeGatos key={i} info={gato} />
-            )
-          }
-        </div>
-
-
-
+      <ContenedorDeTarjeta gatos={gatos} />
       </section>
       <Footer />
 
