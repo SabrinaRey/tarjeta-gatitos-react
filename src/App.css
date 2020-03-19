@@ -92,20 +92,10 @@ article img {
   .cards div {
     width: 15%; }
  .cards img {
-    width: 90%;
+    width: 200px;
     height: 150px;
     border-radius: 25px; }
 
-.tarjetita {
-  margin-top: 20px;
-  width: 100%;
-  height: auto;
-}
-
-.tarjetitaDisabled {
-  background-color: rgb(95, 28, 69);
-
-}
 
 .cards div:hover {
   background-color: #B691A8;
@@ -131,8 +121,3 @@ footer {
     justify-content: space-around; }
     footer .footer-icon div {
       padding: 10px; }
-
-.boton-vermas {
-  background-color: #6D2451;
-  color: #D1ABA7;
-  box-shadow: 0 0 10px; }
